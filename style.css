@@ -1,0 +1,78 @@
+/* Typography and Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+h1, h2, h5 {
+  font-weight: 700;
+}
+
+/* Navigation Styling */
+.nav-link {
+  font-size: 1.1rem;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+/* Sticky Navbar */
+.sticky-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+
+ /* Scroll-To-Top Button */
+#scrollTopBtn {
+  border-radius: 50%;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1040;
+  display: block; /* Always visible — you can later toggle this dynamically with JS */
+}
+
+
+/* Card Styling (Projects & Services) */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card-title {
+  font-weight: 600;
+}
+.card-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* Contact Form Styling */
+.contact-form input,
+.contact-form textarea {
+  border-radius: 0.35rem;
+  transition: border-color 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+/* Footer Link Styling */
+footer a.text-light {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+footer a.text-light:hover {
+  color: #0d6efd !important;
+  text-decoration: underline;
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 0.25rem;
+}
