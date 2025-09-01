@@ -1,4 +1,4 @@
-USE kanhai;
+USE defaultdb;
 
 CREATE TABLE today (
   id VARCHAR(36) PRIMARY KEY,
