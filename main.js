@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (response.ok) {
           alertBox.textContent = result;
           alertBox.classList.add("alert-success");
-          form.reset(); // ✅ Clear form fields
+          form.reset(); 
         } else {
           alertBox.textContent = result;
           alertBox.classList.add("alert-danger");
@@ -50,3 +50,38 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Show or hide the scroll-to-top button based on scroll position
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
+
+// Scroll smoothly to top when the button is clicked
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
+// Smooth scroll to section when nav link is clicked
+document.querySelectorAll("a.nav-link,a.quick-link,a[href^='#']").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").slice(1); 
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      e.preventDefault(); 
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: "smooth",
+      });
+    }
+  });
+});

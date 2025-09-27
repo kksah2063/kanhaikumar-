@@ -1,78 +1,209 @@
-/* Typography and Base Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-}
-h1, h2, h5 {
-  font-weight: 700;
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 4px 6px rgba(36, 20, 255, 0.1);
 }
 
-/* Navigation Styling */
-.nav-link {
-  font-size: 1.1rem;
-  color: #495057;
+.navbar-brand img {
+  margin-right: 8px;
+}
+
+.desktop-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.desktop-nav .nav-link:hover {
+  background-color: rgba(130, 168, 240, 0.5);
+}
+
+/* Logo Hover Effect */
+.logo-enhanced {
+  border-radius: 100%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-enhanced:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Close Button Hover */
+.btn-close-black {
+  transition: background-color 0.3s ease;
+}
+
+.btn-close-black:hover {
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Offcanvas Menu */
+.offcanvas-start {
+  width: 250px;
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+
+.offcanvas-start .nav-link {
+  color: black;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.offcanvas-start .nav-link:hover {
+  background-color: rgba(13, 110, 253, 0.2);
+}
+
+/* Mobile Toggle Button */
+.btn-outline-light {
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Responsive Visibility */
+@media (max-width: 991.98px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-toggle {
+    display: none;
+  }
+}
+
+/* Contact & Connect Section */
+.contact-connect h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.contact-connect ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.contact-connect li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
-.nav-link:hover,
-.nav-link.active {
-  color: #0d6efd;
+
+.contact-connect li i {
+  color: #5578ee;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-connect li:hover i {
+  transform: scale(1.2);
+}
+
+.contact-connect a {
   text-decoration: none;
+  color: #5578ee;
+  transition: color 0.3s ease;
 }
 
-/* Sticky Navbar */
-.sticky-top-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-}
-
-
- /* Scroll-To-Top Button */
-#scrollTopBtn {
-  border-radius: 50%;
-  padding: 0.5rem 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1040;
-  display: block; /* Always visible — you can later toggle this dynamically with JS */
-}
-
-
-/* Card Styling (Projects & Services) */
-.card {
-  border: none;
-  border-radius: 0.5rem;
-  transition: transform 0.2s ease;
-}
-.card:hover {
-  transform: scale(1.02);
-}
-.card-title {
-  font-weight: 600;
-}
-.card-text {
-  font-size: 0.95rem;
-  color: #6c757d;
-}
-
-/* Contact Form Styling */
-.contact-form input,
-.contact-form textarea {
-  border-radius: 0.35rem;
-  transition: border-color 0.2s ease;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #0d6efd;
-  box-shadow: none;
-}
-
-/* Footer Link Styling */
-footer a.text-light {
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-footer a.text-light:hover {
-  color: #0d6efd !important;
+.contact-connect a:hover {
   text-decoration: underline;
-  background-color: rgba(13, 110, 253, 0.1);
-  border-radius: 0.25rem;
+  color: #3456c0;
 }
+
+/* Float Animation */
+@keyframes floatOnHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float-hover {
+  transition: transform 0.3s ease;
+}
+
+.animate-float-hover:hover {
+  animation: floatOnHover 1.5s ease-in-out infinite;
+}
+
+/* Card Hover Animations */
+.service-card,
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Links */
+#contact a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Link Hover Effects */
+.quick-link,
+.connect-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.quick-link::after,
+.connect-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.quick-link:hover,
+.connect-link:hover {
+  color: #0d6efd;
+}
+
+.quick-link:hover::after,
+.connect-link:hover::after {
+  width: 100%;
+}
+
+/* Scroll Button */
+.scroll-btn {
+  z-index: 9999;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
